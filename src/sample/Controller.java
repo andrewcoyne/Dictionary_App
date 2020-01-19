@@ -8,7 +8,7 @@ public class Controller {
     private AnchorPane root;
     private JFXTextField input;
     public void initialize(){
-        String[] dictWords = {"hello", "hi"};
+        String[] dictWords = {"hello", "hi"}; //make this the list of terms the user has previously searched
         TextFields.bindAutoCompletion(input, dictWords);
     }
 }
