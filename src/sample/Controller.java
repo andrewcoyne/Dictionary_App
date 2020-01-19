@@ -12,3 +12,5 @@ public class Controller {
         TextFields.bindAutoCompletion(input, dictWords);
     }
 }
+
+//TODO: obtain HashMap (or something similar) of every word in the English dictionary, and get the autocomplete to work
