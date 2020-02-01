@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <JFXTextField layoutX="14.0" layoutY="24.0" prefHeight="34.0" prefWidth="230.0" promptText="Enter a word or phrase...">
+      <JFXTextField fx:id="input" layoutX="14.0" layoutY="24.0" prefHeight="34.0" prefWidth="306.0" promptText="Enter a word or phrase...">
          <font>
             <Font name="Calibri Light" size="15.0" />
          </font></JFXTextField>
-      <JFXToggleButton contentDisplay="BOTTOM" graphicTextGap="0.0" layoutX="262.0" layoutY="6.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="138.0" size="8.0" text="Inverse Dictionary" toggleColor="WHITE" toggleLineColor="#008cff">
-         <font>
-            <Font name="Calibri Light" size="16.0" />
-         </font></JFXToggleButton>
-      <JFXTextArea editable="false" focusColor="WHITE" layoutX="14.0" layoutY="83.0" prefHeight="34.0" prefWidth="200.0" text="Word of the Day" unFocusColor="WHITE">
+      <JFXTextArea fx:id="wOTD" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="83.0" prefHeight="34.0" prefWidth="200.0" text="Word of the Day" unFocusColor="WHITE">
          <font>
             <Font name="Calibri Light" size="18.0" />
          </font>
       </JFXTextArea>
-      <JFXTextArea editable="false" focusColor="WHITE" layoutX="14.0" layoutY="101.0" prefHeight="70.0" prefWidth="385.0" text="Word" unFocusColor="WHITE">
+      <JFXTextArea fx:id="word" editable="false" focusColor="WHITE" layoutX="12.0" layoutY="104.0" prefHeight="83.0" prefWidth="387.0" text="Word" unFocusColor="WHITE">
          <font>
-            <Font name="Calibri Light" size="60.0" />
+            <Font name="Calibri Light" size="55.0" />
          </font>
       </JFXTextArea>
-      <JFXTextArea editable="false" focusColor="WHITE" layoutX="29.0" layoutY="200.0" prefHeight="34.0" prefWidth="200.0" text="Definition" unFocusColor="WHITE">
+      <JFXTextArea fx:id="definition" editable="false" focusColor="WHITE" layoutX="12.0" layoutY="195.0" prefHeight="400.0" prefWidth="376.0" text="Definition" unFocusColor="WHITE">
          <font>
             <Font name="Calibri Light" size="22.0" />
+
          </font>
       </JFXTextArea>
+      <JFXButton fx:id="button" layoutX="327.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#dictSetter" prefHeight="34.0" prefWidth="65.0" ripplerFill="BLACK" style="-fx-background-color: #dcdcdc;" text="Search">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font></JFXButton>
    </children>
 </AnchorPane>
